@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Childcare Tour 1.0</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-g_front_entrace_1">
+        <li class="text">g_front_entrace_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-g_front_entrance_2">
+        <li class="text">g_front_entrance_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-g_baby_1">
+        <li class="text">g_baby_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-g_baby_3">
+        <li class="text">g_baby_3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-g_toddler_2">
+        <li class="text">g_toddler_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-g_toddler_1">
+        <li class="text">g_toddler_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-g_toddler_3">
+        <li class="text">g_toddler_3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-go_undercover_walkway_1">
+        <li class="text">go_undercover_walkway_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-go_undercover_walkway_2">
+        <li class="text">go_undercover_walkway_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-go_stairs_1">
+        <li class="text">go_stairs_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-go_undercover_playground_1">
+        <li class="text">go_undercover_playground_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-go_stairs_2">
+        <li class="text">go_stairs_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-go_undercover_playground_2">
+        <li class="text">go_undercover_playground_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-go_undercover_playground_3">
+        <li class="text">go_undercover_playground_3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-go_playground">
+        <li class="text">go_playground</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-uo_undercover_stairs">
+        <li class="text">uo_undercover_stairs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-uo_undercover_walkway">
+        <li class="text">uo_undercover_walkway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-u_front_entrance_1">
+        <li class="text">u_front_entrance_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-u_front_entrance_2">
+        <li class="text">u_front_entrance_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-u_kinder_activity">
+        <li class="text">u_kinder_activity</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-u_kinder_1">
+        <li class="text">u_kinder_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-u_kinder_2">
+        <li class="text">u_kinder_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-u_kinder_3">
+        <li class="text">u_kinder_3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-u_kinder_4">
+        <li class="text">u_kinder_4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-uo_undercover_playarea">
+        <li class="text">uo_undercover_playarea</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
